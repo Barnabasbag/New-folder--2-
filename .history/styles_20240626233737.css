@@ -1,0 +1,76 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, #1d1d1d 0%, #111 100%);
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.calculator {
+    background: #333;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.display {
+    background: #000;
+    color: #0f0;
+    font-size: 2.5rem;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    text-align: right;
+    animation: glow 1s ease-in-out infinite alternate;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.button {
+    background: #444;
+    border: none;
+    padding: 20px;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #fff;
+    transition: transform 0.1s ease;
+}
+
+.button:hover {
+    transform: scale(1.1);
+}
+
+.operator {
+    background: #ff9800;
+}
+
+.equals {
+    background: #4caf50;
+    grid-column: span 2;
+}
+
+.zero {
+    grid-column: span 2;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 5px #0f0, 0 0 10px #0f0, 0 0 20px #0f0, 0 0 40px #0f0, 0 0 80px #0f0;
+    }
+    to {
+        text-shadow: 0 0 10px #0f0, 0 0 20px #0f0, 0 0 40px #0f0, 0 0 80px #0f0, 0 0 160px #0f0;
+    }
+}
